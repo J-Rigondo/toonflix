@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toonflix/screens/home-screen.dart';
 
 void main() {
   runApp(const App());
@@ -31,28 +32,13 @@ class _AppState extends State<App> {
     print('build');
     //버튼을계속누르면 빌드가 일어날까
     return MaterialApp(
+      theme: ThemeData(
+          colorScheme: const ColorScheme.light(),
+          textTheme: const TextTheme(
+              displayLarge: TextStyle(color: Color(0xFF232B55)))),
       home: Scaffold(
         body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(12),
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'counter',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                  Text('$counter', style: const TextStyle(fontSize: 30)),
-                  IconButton(
-                    onPressed: onClick,
-                    icon: const Icon(Icons.add_box),
-                    iconSize: 40,
-                  )
-                ],
-              ),
-            ),
-          ),
+          child: HomeScreen(),
         ),
       ),
     );
