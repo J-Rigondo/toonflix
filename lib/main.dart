@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:toonflix/screens/home-screen.dart';
+import 'package:toonflix/screens/home_screen.dart';
 
 void main() {
   runApp(const App());
@@ -13,20 +13,6 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  int counter = 0;
-
-  void onClick() {
-    setState(() {
-      counter = counter + 1;
-    });
-  }
-
-  @override
-  void initState() {}
-
-  @override
-  void dispose() {}
-
   @override
   Widget build(BuildContext context) {
     print('build');
